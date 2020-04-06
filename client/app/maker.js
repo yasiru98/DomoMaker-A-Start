@@ -25,7 +25,7 @@ const handleDelete = (e) => {
       return false;
     }
   
-    sendAjax('DELETE', $("#removeForm").attr("action"), $("#removeForm").serialize(), function() {
+    sendAjax('DELETE', $("#deleteForm").attr("action"), $("#deleteForm").serialize(), function() {
       loadDomosFromServer();
     });
   
@@ -112,7 +112,7 @@ const setup = function(csrf) {
     ReactDOM.render(
         <DeleteForm csrf={csrf} />, document.querySelector("#deleteDomo")
     );
-    
+
     ReactDOM.render(
         <DomoList domos={[]} />, document.querySelector("#domos")
     );

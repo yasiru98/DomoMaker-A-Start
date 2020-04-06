@@ -28,7 +28,7 @@ var handleDelete = function handleDelete(e) {
     return false;
   }
 
-  sendAjax('DELETE', $("#removeForm").attr("action"), $("#removeForm").serialize(), function () {
+  sendAjax('DELETE', $("#deleteForm").attr("action"), $("#deleteForm").serialize(), function () {
     loadDomosFromServer();
   });
   return false;
